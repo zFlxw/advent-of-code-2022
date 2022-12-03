@@ -9,7 +9,7 @@ export function day02_01() {
         sum += getWinScore(opp, mine) + getShapeScore(mine);
     }
 
-    console.log(sum);
+    console.log('1.', sum);
 }
 
 export function day02_02() {
@@ -21,7 +21,7 @@ export function day02_02() {
         sum += getShapeScore(chooseShape(opp, res)) + getWinRating(res);
     }
 
-    console.log(sum);
+    console.log('2.', sum);
 }
 
 function getShapeName(shape: string): string {

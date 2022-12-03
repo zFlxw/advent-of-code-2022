@@ -17,7 +17,7 @@ export function day01_01() {
         }
     }
 
-    console.log(currentMaxCal);
+    console.log('1.', currentMaxCal);
 }
 
 export function day01_02() {
@@ -51,5 +51,5 @@ export function day01_02() {
 
     let sum = 0;
     currentMaxCals.forEach((entry) => (sum += entry));
-    console.log(sum);
+    console.log('2.', sum);
 }

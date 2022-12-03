@@ -24,7 +24,7 @@ export function day03_01() {
         }
     }
 
-    console.log(sum);
+    console.log('1.', sum);
 }
 
 export function day03_02() {
@@ -46,5 +46,5 @@ export function day03_02() {
         sum += chars.indexOf(shared) + 1;
     }
 
-    console.log(sum);
+    console.log('2.', sum);
 }
