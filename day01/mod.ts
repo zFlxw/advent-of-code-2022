@@ -47,9 +47,7 @@ export function day01_02() {
     currentMaxCals.sort((x, y) => x - y);
     if (temp > currentMaxCals[0]) {
         currentMaxCals[0] = temp;
-    }
-    console.log(currentMaxCals);
-    
+    }    
 
     let sum = 0;
     currentMaxCals.forEach((entry) => (sum += entry));
