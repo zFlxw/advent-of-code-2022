@@ -6,13 +6,25 @@ export function day02_01() {
     for (const line of lines) {
         if (line === '') continue;
         const [opp, mine] = line.split(' ');
-        sum += getWinScore(opp, mine) + getShapeScore(mine)
+        sum += getWinScore(opp, mine) + getShapeScore(mine);
     }
 
     console.log(sum);
 }
 
-export function day02_02() { }
+export function day02_02() {
+    const lines = readFileLines('day02/input.txt');
+    let sum = 0;
+    for (const line of lines) {
+        if (line === '') continue;
+        const [opp, res] = line.split(' ');
+        console.log(getShapeScore(chooseShape(opp, res)), getWinRating(res));
+
+        sum += getShapeScore(chooseShape(opp, res)) + getWinRating(res);
+    }
+
+    console.log(sum);
+}
 
 function getShapeName(shape: string): string {
     switch (shape) {
@@ -60,4 +72,45 @@ function getWinScore(oppShape: string, myShape: string): number {
     }
 
     return 0;
+}
+
+function getWinRating(result: string) {
+    if (result === 'Z') {
+        return 6;
+    }
+
+    if (result === 'Y') {
+        return 3;
+    }
+
+    return 0;
+}
+
+function chooseShape(oppShape: string, res: string) {
+    const name = getShapeName(oppShape);
+    if (res === 'Y') {
+        return oppShape;
+    }
+
+    if (name === 'rock') {
+        if (res === 'X') {
+            return 'C';
+        } else {
+            return 'B';
+        }
+    } else if (name === 'paper') {
+        if (res === 'X') {
+            return 'A';
+        } else {
+            return 'C';
+        }
+    } else if (name === 'scissors') {
+        if (res === 'X') {
+            return 'B';
+        } else {
+            return 'A';
+        }
+    }
+
+    return '';
 }
