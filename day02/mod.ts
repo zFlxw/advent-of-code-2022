@@ -18,8 +18,6 @@ export function day02_02() {
     for (const line of lines) {
         if (line === '') continue;
         const [opp, res] = line.split(' ');
-        console.log(getShapeScore(chooseShape(opp, res)), getWinRating(res));
-
         sum += getShapeScore(chooseShape(opp, res)) + getWinRating(res);
     }
 
