@@ -26,4 +26,27 @@ export function day04_01() {
     console.log('1.', totalOverlaps);
 }
 
-export function day04_02() {}
+export function day04_02() {
+    const lines = readFileLines('/day04/input.txt');
+    let totalOverlaps = 0;
+    for (const line of lines) {
+        if (line === '') continue;
+        const [first, second] = line.split(',');
+        const [firstLowerBound, firstUpperBound] = first
+            .split('-')
+            .map((val) => parseInt(val));
+        const [secondLowerBound, secondUpperBound] = second
+            .split('-')
+            .map((val) => parseInt(val));
+        
+        // 1-10,6-9
+        
+        if (Math.max(firstLowerBound, secondLowerBound) <= Math.min(firstUpperBound, secondUpperBound)) {
+            console.log(line);
+            totalOverlaps++;
+        }
+    }
+
+    console.log('2.', totalOverlaps);
+    
+}
