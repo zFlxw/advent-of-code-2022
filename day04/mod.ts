@@ -39,10 +39,7 @@ export function day04_02() {
             .split('-')
             .map((val) => parseInt(val));
         
-        // 1-10,6-9
-        
         if (Math.max(firstLowerBound, secondLowerBound) <= Math.min(firstUpperBound, secondUpperBound)) {
-            console.log(line);
             totalOverlaps++;
         }
     }
