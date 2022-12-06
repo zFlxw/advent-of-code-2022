@@ -3,6 +3,7 @@ import { day02_01, day02_02 } from "./day02/mod.ts";
 import { day03_01, day03_02 } from "./day03/mod.ts";
 import { day04_01,day04_02 } from "./day04/mod.ts";
 import { day05_01,day05_02 } from "./day05/mod.ts";
+import { day06_01, day06_02 } from './day06/mod.ts';
 
 // Day01
 console.log('Day 01:');
@@ -32,4 +33,9 @@ console.log();
 console.log('Day 05:');
 day05_01();
 day05_02();
+console.log();
+
+console.log('Day 06:');
+day06_01();
+day06_02();
 console.log();
